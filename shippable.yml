@@ -11,6 +11,13 @@ runtime:
 
 build:
   ci:
+    - git clone git://github.com/ariya/phantomjs.git
+    - cd phantomjs
+    - git checkout 2.1.1
+    - git submodule init
+    - git submodule update
+    - ./build.py
+    - cp bin/phantomjs /usr/bin/
     - npm install
     - npm test
   cache: true
