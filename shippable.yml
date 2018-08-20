@@ -11,6 +11,5 @@ runtime:
 
 build:
   ci:
-    - apt-get update --yes && apt-get install --yes phantomjs libfreetype6 libfontconfig
     - npm install
     - npm test
