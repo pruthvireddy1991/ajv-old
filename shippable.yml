@@ -18,6 +18,7 @@ build:
     - git submodule update
     - ./build.py
     - cp bin/phantomjs /usr/bin/
+    - cd ..
     - npm install
     - npm test
   cache: true
