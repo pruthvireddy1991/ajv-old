@@ -11,5 +11,12 @@ runtime:
 
 build:
   ci:
+    - apt-get update --yes && apt-get install --yes phantomjs libfreetype6 libfontconfig && apt-get install build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
+    - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
+    - node --version
     - npm install
     - npm test
+  cache: true
+
+  cache_dir_list:
+    - $SHIPPABLE_BUILD_DIR/node_modules
