@@ -19,8 +19,6 @@ build:
     - git clone git://github.com/ariya/phantomjs.git
     - cd phantomjs
     - git checkout 2.1.1
-    - git submodule init
-    - git submodule update
     - ./build.py --confirm --jobs 1
     - cp bin/phantomjs /usr/bin/
     - cd ..
