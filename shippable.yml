@@ -8,7 +8,11 @@ env:
 
 runtime:
   nodePool: shippable_shared_aarch64
-
+  
+notifications:
+  email:
+    recipients:
+    - reddypruthvi1991@gmail.com
 build:
   ci:
     - apt-get update --yes && apt-get install build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
@@ -22,6 +26,7 @@ build:
     - cd ..
     - npm install
     - npm test
+    
   cache: true
 
   cache_dir_list:
