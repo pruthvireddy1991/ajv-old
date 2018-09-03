@@ -12,7 +12,7 @@ runtime:
 notifications:
   email:
     recipients:
-    - reddypruthvi1991@gmail.com
+    - pruthvi.reddy@puresoftware.com
 
 build:
   ci:
